@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // const dummyData = {
 //     copyright: "Fefo Bouvier",
@@ -10,14 +11,20 @@ import React from 'react';
 //     title: "Crescent Moon Occultation"
 // }
 
+const nasaPhotoWrapperDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
 const NasaPhoto = (props) => {
     return (
-        <div className="nasa-photo-wrapper">
+        <nasaPhotoWrapperDiv>
             <h3>{props.photo.title}</h3>
             <p>{props.photo.date}</p>
             <img src={props.photo.hdurl} />
             <p className="explanation">{props.photo.explanation}</p>
-        </div>
+        </nasaPhotoWrapperDiv>
     )
 }
 
